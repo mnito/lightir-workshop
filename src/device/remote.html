@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lightir Remote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            display: flex;
+            flex-direction: column;
+            overflow: none;
+            font-family: sans-serif;
+        }
+
+        div {
+            display: flex;
+            flex: 1;
+            touch-action: manipulation;
+            width: 100%;
+        }
+
+        h1#header {
+            font-size: 5vmin;
+            text-align: center;
+            width: 100%;
+        }
+
+        button {
+            appearance: none;
+            -webkit-appearance: none;
+            display: block;
+            flex: 1;
+            font-size: 4vmin;
+            height: 10vh;
+            margin: 5px;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+        .red {
+            background-color: lightcoral;
+        }
+        .green {
+            background-color: lightgreen;
+        }
+        .blue {
+            background-color: lightblue;
+        }
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="header"></h1>
+    </div>
+    <div>
+        <button onclick="javascript:togglePower()">Power</button>
+    </div>
+    <div>
+        <button onclick="javascript:dim()">Dim</button>
+        <button onclick="javascript:brighten()">Brighten</button>
+    </div>
+    <div>
+        <button class="red" onclick="javascript:setColor('red')">Red</button>
+        <button class="green" onclick="javascript:setColor('green')">Green</button>
+        <button class="blue" onclick="javascript:setColor('blue')">Blue</button>
+        <button class="white" onclick="javascript:setColor('white')">White</button>
+    </div>
+
+    <script type="text/javascript">
+        const togglePower =  () => fetch('/power', {method: 'POST'});
+
+        const brighten =  () => fetch('/brighten', {method: 'POST'});
+        const dim =  () => fetch('/dim', {method: 'POST'});
+
+        const setColor =  (color) => fetch('/color', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `color=${color}`
+        });
+
+        fetch('/').then(async r => document.getElementById("header").innerText = await r.text());
+    </script>
+</body>
+</html>

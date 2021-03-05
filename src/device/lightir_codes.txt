@@ -1,0 +1,56 @@
+#define BRIGHTEN        FF3AC5
+#define DIM             FFBA45
+
+#define PLAYPAUSE       FF827D
+#define POWER           FF02FD
+
+#define RED             FF1AE5
+#define GREEN           FF9A65
+#define BLUE            FFA25D
+#define WHITE           FF22DD
+
+#define REDORANGE       FF2AD5
+#define MINT            FFAA55
+#define INDIGO          FF926D
+#define MISTYROSE       FF12ED
+
+#define ORANGE          FF0AF5
+#define TURQUOISE       FF8A75
+#define VIOLET          FFB24D
+#define PALEPINK        FF32CD
+
+#define YELLOW          FF38C7
+#define CYAN            FFB847
+#define PURPLE          FF7887
+#define PALEBLUE        FFF807
+
+#define CHARTREUSE      FF18E7
+#define CERULEAN        FF9867
+#define FUCHSIA         FF58A7
+#define SKYBLUE         FFD827
+
+#define UPRED           FF28D7
+#define UPGREEN         FFA857
+#define UPBLUE          FF6897
+
+#define DOWNRED         FF08F7
+#define DOWNGREEN       FF8877
+#define DOWNBLUE        FF48B7
+
+#define DIY1            FF30CF
+#define DIY2            FFB04F
+#define DIY3            FF708F
+
+#define DIY4            FF10EF
+#define DIY5            FF906F
+#define DIY6            FF50AF
+
+#define QUICK           FFE817
+#define SLOW            FFC837
+
+#define AUTO            FFF00F
+#define FLASH           FFD02F
+#define JUMP3           FF20DF
+#define JUMP7           FFA05F
+#define FADE3           FF609F
+#define FADE7           FFE01F
